@@ -17,18 +17,11 @@ Both should be installed and make sure mongodb is running.
 
 #### First Method
 ```shell
-git clone https://github.com/koolkishan/chat-app-react-nodejs
-cd chat-app-react-nodejs
+git clone https://github.com/Pavansai1967/chat-app
+cd chat-app
 ```
-Now rename env files from .env.example to .env
-```shell
-cd public
-mv .env.example .env
-cd ..
-cd server
-mv .env.example .env
-cd ..
-```
+Create env .files in public and server
+
 
 Now install the dependencies
 ```shell
@@ -38,7 +31,7 @@ cd ..
 cd public
 yarn
 ```
-We are almost done, Now just start the development server.
+
 
 For Frontend.
 ```shell
@@ -52,17 +45,5 @@ Open another terminal in folder, Also make sure mongodb is running in background
 cd server
 yarn start
 ```
-Done! Now open localhost:3000 in your browser.
 
-#### Second Method
-- This method requires docker and docker-compose to be installed in your system.
-- Make sure you are in the root of your project and run the following command.
-
-```shell
-docker compose build --no-cache
-```
-after the build is complete run the containers using the following command
-```shell
-docker compose up
-```
 now open localhost:3000 in your browser.

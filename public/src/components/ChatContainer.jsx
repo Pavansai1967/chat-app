@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { sendMessageRoute, recieveMessageRoute } from "../utils/APIRoutes";
 import { theme } from '../utils/theme';
+import defaultAvatar from "../assets/default-avatar.svg"
 export default function ChatContainer({ currentChat, socket }) {
   const [messages, setMessages] = useState([]);
   const scrollRef = useRef();
@@ -77,6 +78,9 @@ export default function ChatContainer({ currentChat, socket }) {
             <img
               src={`data:image/svg+xml;base64,${currentChat.avatarImage}`}
               alt=""
+              onError={(e) => {
+                e.target.src = defaultAvatar;
+              }}
             />
           </div>
           <div className="username">
