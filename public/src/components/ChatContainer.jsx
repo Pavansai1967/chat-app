@@ -6,7 +6,6 @@ import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { sendMessageRoute, recieveMessageRoute } from "../utils/APIRoutes";
 import { theme } from '../utils/theme';
-
 export default function ChatContainer({ currentChat, socket }) {
   const [messages, setMessages] = useState([]);
   const scrollRef = useRef();
@@ -111,7 +110,7 @@ const Container = styled.div`
   grid-template-rows: 80px 1fr 90px;
   gap: 0;
   overflow: hidden;
-  background: #0f0e17;
+  background: ${theme.dark};
   position: relative;
 
   .chat-header {
@@ -119,8 +118,8 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
-    background: #0a0a12;
-    border-bottom: 1px solid #ff8906;
+    background-color: ${theme.darker};
+    border-bottom: 1px solid ${theme.stroke};
 
     .user-details {
       display: flex;
@@ -132,13 +131,13 @@ const Container = styled.div`
           height: 2.8rem;
           border-radius: 50%;
           object-fit: cover;
-          border: 2px solid #ff8906;
+          border: 2px solid ${theme.primary};
         }
       }
 
       .username {
         h3 {
-          color: #fffffe;
+          color: ${theme.textPrimary};
           font-weight: 500;
         }
       }
@@ -151,7 +150,7 @@ const Container = styled.div`
     flex-direction: column;
     gap: 1rem;
     overflow: auto;
-    background: #0f0e17;
+    background: ${theme.dark};
 
     .message {
       display: flex;
@@ -171,8 +170,8 @@ const Container = styled.div`
     .sended {
       justify-content: flex-end;
       .content {
-        background: #ff8906;
-        color: #0f0e17;
+        background: ${theme.primary};
+        color: white;
         border-top-right-radius: 0.2rem;
       }
     }
@@ -180,8 +179,9 @@ const Container = styled.div`
     .recieved {
       justify-content: flex-start;
       .content {
-        background: rgba(10, 10, 18, 0.8);
-        color: #fffffe;
+        background: ${theme.darker};
+        color: ${theme.textPrimary};
+        border: 1px solid ${theme.stroke};
         border-top-left-radius: 0.2rem;
       }
     }

@@ -2,7 +2,7 @@
 Snappy is chat application build with the power of MERN Stack. You can find the tutorial [here](https://www.youtube.com/watch?v=otaQKODEUFs)
 
 
-![login page](./images/NexChat-login.png)
+![login page](./images/Login.png)
 
 ![home page](./images/NexChat.png)
 

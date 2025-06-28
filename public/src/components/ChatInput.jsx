@@ -48,13 +48,14 @@ export default function ChatInput({ handleSendMsg }) {
     </Container>
   );
 }
+
 const Container = styled.div`
   display: grid;
   align-items: center;
   grid-template-columns: 50px 1fr;
-  background: #0a0a12;
+  background: ${theme.darker};
   padding: 0 1.5rem;
-  border-top: 1px solid rgba(255, 137, 6, 0.2);
+  border-top: 1px solid ${theme.stroke};
 
   .button-container {
     display: flex;
@@ -65,12 +66,12 @@ const Container = styled.div`
       
       svg {
         font-size: 1.6rem;
-        color: #ff8906;
+        color: ${theme.primary};
         cursor: pointer;
         transition: all 0.2s ease;
         
         &:hover {
-          color: #e53170;
+          color: ${theme.secondary};
         }
       }
     }
@@ -82,20 +83,20 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
-    background: rgba(15, 14, 23, 0.7);
+    background: ${theme.dark};
     padding: 0 1rem;
     
     input {
       width: 100%;
       height: 50px;
       background: transparent;
-      color: #fffffe;
+      color: ${theme.textPrimary};
       border: none;
       padding: 0 1rem;
       font-size: 1rem;
 
       &::placeholder {
-        color: #a7a9be;
+        color: ${theme.textSecondary};
       }
     }
     
@@ -105,19 +106,20 @@ const Container = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #ff8906;
+      background: ${theme.primary};
       border: none;
       width: 40px;
       height: 40px;
       cursor: pointer;
+      transition: all 0.2s ease;
       
       &:hover {
-        background: #e53170;
+        background: ${theme.secondary};
       }
       
       svg {
         font-size: 1.4rem;
-        color: #0f0e17;
+        color: white;
       }
     }
   }

@@ -100,7 +100,7 @@ const FormContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #0f0e17;
+  background: ${theme.dark};
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
   .brand {
@@ -115,7 +115,7 @@ const FormContainer = styled.div`
     }
     
     h1 {
-      color: #fffffe;
+      color: ${theme.light};
       text-transform: uppercase;
       font-weight: 600;
       letter-spacing: 1px;
@@ -127,34 +127,34 @@ const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    background-color: rgba(15, 14, 23, 0.9);
+    background-color: ${theme.darker};
     border-radius: 1rem;
     padding: 2.5rem;
     width: 380px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    border: 1px solid #ff8906;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid ${theme.stroke};
   }
 
   input {
-    background-color: rgba(10, 10, 18, 0.8);
+    background-color: ${theme.darker};
     padding: 1rem;
-    border: 1px solid #ff8906;
+    border: 1px solid ${theme.stroke};
     border-radius: 0.5rem;
-    color: #fffffe;
+    color: ${theme.textPrimary};
     width: 100%;
     font-size: 1rem;
     transition: all 0.3s ease;
 
     &:focus {
-      border: 1px solid #f25f4c;
+      border: 1px solid ${theme.primary};
       outline: none;
-      box-shadow: 0 0 0 3px rgba(242, 95, 76, 0.2);
+      box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.2);
     }
   }
 
   button {
-    background: #ff8906;
-    color: #0f0e17;
+    background: ${theme.primary};
+    color: white;
     padding: 1rem;
     border: none;
     font-weight: 600;
@@ -166,24 +166,23 @@ const FormContainer = styled.div`
     margin-top: 0.5rem;
 
     &:hover {
-      background: #e53170;
-      color: #fffffe;
+      background: ${theme.secondary};
     }
   }
 
   span {
-    color: #a7a9be;
+    color: ${theme.paragraph};
     text-align: center;
     font-size: 0.9rem;
 
     a {
-      color: #ff8906;
+      color: ${theme.primary};
       text-decoration: none;
       font-weight: 500;
       transition: all 0.2s ease;
 
       &:hover {
-        color: #f25f4c;
+        color: ${theme.secondary};
         text-decoration: underline;
       }
     }

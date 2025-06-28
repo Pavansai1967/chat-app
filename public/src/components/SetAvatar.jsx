@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 import { setAvatarRoute } from "../utils/APIRoutes";
 import multiavatar from "@multiavatar/multiavatar/esm";
 import { theme } from '../utils/theme';
-
 export default function SetAvatar() {
   const navigate = useNavigate();
   const [avatars, setAvatars] = useState([]);
@@ -115,7 +114,7 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 3rem;
-  background-color: #131324;
+  background: ${theme.dark};
   height: 100vh;
   width: 100vw;
 
@@ -125,7 +124,7 @@ const Container = styled.div`
 
   .title-container {
     h1 {
-      color: white;
+      color: ${theme.textPrimary};
     }
   }
 
@@ -154,12 +153,12 @@ const Container = styled.div`
     }
 
     .selected {
-      border: 0.4rem solid #4e0eff;
+      border: 0.4rem solid ${theme.primary};
     }
   }
 
   .submit-btn {
-    background-color: #4e0eff;
+    background: ${theme.primary};
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -170,7 +169,7 @@ const Container = styled.div`
     text-transform: uppercase;
 
     &:hover {
-      background-color: #3c0edc;
+      background: ${theme.secondary};
     }
   }
 `;

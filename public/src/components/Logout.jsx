@@ -4,8 +4,7 @@ import { BiPowerOff } from "react-icons/bi";
 import styled from "styled-components";
 import axios from "axios";
 import { logoutRoute } from "../utils/APIRoutes";
-import { theme } from '../utils/theme';
-
+import { theme, accessibility } from '../utils/theme';
 export default function Logout() {
   const navigate = useNavigate();
   const handleClick = async () => {
@@ -30,7 +29,7 @@ const Button = styled.button`
   align-items: center;
   padding: 0.6rem;
   border-radius: 50%;
-  background: #ff8906;
+  background: ${theme.primary};
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -38,12 +37,12 @@ const Button = styled.button`
   height: 40px;
 
   &:hover {
-    background: #e53170;
+    background: ${theme.secondary};
     transform: scale(1.05);
   }
 
   svg {
     font-size: 1.3rem;
-    color: #0f0e17;
+    color: white;
   }
 `;
